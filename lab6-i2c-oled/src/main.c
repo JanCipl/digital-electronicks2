@@ -54,6 +54,7 @@ int main(void)
             itoa(dht12.temp_int, string, 10);
             oled_init(OLED_DISP_ON);
             oled_clrscr();
+            oled_charMode(NORMALSIZE);
             oled_gotoxy(0, 2);
             oled_puts(string);
             oled_puts(".");
@@ -62,6 +63,7 @@ int main(void)
             oled_puts(" °C\r\n");
 
             itoa(dht12.hum_int, string, 10);
+            oled_charMode(NORMALSIZE);
             oled_gotoxy(0, 4);
             oled_puts(string);
             oled_puts(".");
